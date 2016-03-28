@@ -1,5 +1,5 @@
-MAINTAINER Victor Matekole <victor@GROK7.com>
 FROM gliderlabs/alpine:3.3
+MAINTAINER Victor Matekole <victor@GROK7.com>
 RUN apk add --update \
     python \
     py-pip \
