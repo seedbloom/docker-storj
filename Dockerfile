@@ -1,14 +1,13 @@
-FROM gliderlabs/alpine:3.3
+FROM python:2.7.11-alpine
 MAINTAINER Victor Matekole <victor@GROK7.com>
-RUN apk add --update \
-    python \
-    py-pip \
-    python-dev \
-    graphviz \
-    python-dev \ 
+RUN apk add --update \    
     graphviz-dev \
-    pkgconfig gcc && \
+    musl-dev \
+    build-base \
+    linux-headers \
+    pkgconfig \
+    gcc && \
     rm -rf /var/cache/apk/*
-RUN pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" --install-option="--library-path=/usr/lib/graphviz/" && \
+RUN pip install pygraphviz && \
     pip install dataserv-client
 ENTRYPOINT ["dataserv-client"]
