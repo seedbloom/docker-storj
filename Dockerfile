@@ -27,3 +27,8 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh
     nvm install stable && \
     npm install -g storjshare-cli && \
     npm update -g storjshare-cli
+
+EXPOSE 4000
+EXPOSE 4001
+EXPOSE 4002
+EXPOSE 4003
