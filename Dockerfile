@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION stable
+ENV PATH /usr/local/nvm/versions/node/v6.3.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash && \
     source  $NVM_DIR/nvm.sh && \
@@ -32,3 +33,4 @@ EXPOSE 4000
 EXPOSE 4001
 EXPOSE 4002
 EXPOSE 4003
+ENTRYPOINT storjshare
