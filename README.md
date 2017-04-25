@@ -18,7 +18,7 @@ TODO
 ## Create configuration
 Basic configuration
 ```bash
-docker run -it -v $(PWD)/storj-config:/root/.storj seedbloom/storjshare-daemon  create --sjcx 1Ej9gpAxtEKPmPmW2qzz2GQUJima2phLJk --size [1GB, 1TB] --storage [path to storage]  --noedit -o [path to config]
+docker run -it -v $(PWD)/storj-config:[path to config] seedbloom/storjshare-daemon  create --sjcx [YOUR SJCX ADDRESS] --size [1GB, 1TB] --storage [path to storage]  --noedit -o [path to config]
 ```
 The storj configuration will be available in your current dir under ```storj-config```.
 ## Run
